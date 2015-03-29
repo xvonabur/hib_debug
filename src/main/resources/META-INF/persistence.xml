@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+
+	<persistence-unit name="dbUnit" transaction-type="RESOURCE_LOCAL">
+
+		<properties>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="none" />
+            <property name="hibernate.cache.use_query_cache" value="true" />
+            <property name="hibernate.cache.use_second_level_cache" value="true"/>
+            <property name="net.sf.ehcache.configurationResourceName" value="/ehcache.xml"/>
+            <property name="hibernate.cache.region.factory_class"
+                      value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <property name="hibernate.default_batch_fetch_size" value="100"/>
+            <property name="hibernate.search.query.object_lookup_method" value="second_level_cache"/>
+            <property name="hibernate.search.query.database_retrieval_method" value="query"/>
+
+            <property name="hibernate.search.default.directory_provider"
+                      value="ram"/>
+        </properties>
+	</persistence-unit>
+</persistence>

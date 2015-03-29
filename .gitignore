@@ -1,0 +1,8 @@
+*.iml
+.iml
+*.idea/
+.idea/
+out/
+.DS_Store
+target/
+WEB-INF/cache/*

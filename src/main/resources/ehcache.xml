@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+
+    <diskStore path="user.home/cache/ehcache" />
+
+    <!-- DefaultCache setting. -->
+    <defaultCache maxElementsInMemory="100000"
+                  memoryStoreEvictionPolicy="LRU"
+                  eternal="false"
+                  timeToIdleSeconds="300"
+                  timeToLiveSeconds="300"
+                  overflowToDisk="false"
+                  diskPersistent="false" />
+
+    <!-- Special objects setting. -->
+    <cache name="com.example.hib_debug.model.Terminal"
+           maxElementsInMemory="100000"
+           memoryStoreEvictionPolicy="LRU"
+           eternal="true"
+           diskPersistent="false"
+           overflowToDisk="false" />
+
+
+    <cache name="com.example.hib_debug.model.Terminal.transactions"
+           maxElementsInMemory="100000"
+           memoryStoreEvictionPolicy="LRU"
+           eternal="true"
+           diskPersistent="false"
+           overflowToDisk="false" />
+
+    <cache name="com.example.hib_debug.model.Transaction"
+           maxElementsInMemory="100000"
+           memoryStoreEvictionPolicy="LRU"
+           eternal="true"
+           diskPersistent="false"
+           overflowToDisk="false" />
+
+    <cache name="com.example.hib_debug.model.Transaction.currencies"
+           maxElementsInMemory="100000"
+           memoryStoreEvictionPolicy="LRU"
+           eternal="true"
+           diskPersistent="false"
+           overflowToDisk="false" />
+
+    <cache name="com.example.hib_debug.model.TransactionCurrency"
+           maxElementsInMemory="100000"
+           memoryStoreEvictionPolicy="LRU"
+           eternal="true"
+           diskPersistent="false"
+           overflowToDisk="false" />
+
+</ehcache>
